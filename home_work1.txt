@@ -1,0 +1,12 @@
+   0 mkdir -p /home/animals/cats && touch /home/animals/cats/garfild
+   1 mkdir -p /home/animals/dogs && touch /home/animals/dogs/pluto
+   2 mkdir -p /home/animals/fish && touch /home/animals/fish/nemo
+   3 mkdir -p /home/humans && touch /tmp/adam && touch /tmp/evA
+   4 cp /tmp/adam /home/humans/adam
+   5 mv /tmp/evA /opt/eva
+   6 mv /opt/eva /home/humans/eve
+   7 cd home
+   8 cd /
+   9 cd home
+  10 tree
+  
