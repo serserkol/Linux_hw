@@ -1,0 +1,99 @@
+1
+nano sleeper.sh
+#!/bin/bash
+
+# повторить 10 раз
+for i in {1..10}
+do
+    # получить текущую дату в формате ЧЧ:ММ:СС
+    date=$(date +"%T")
+
+    # получить количество процессов с помощью pgrep -c
+    # подробнее см. [1]
+    procs=$(pgrep -c .)
+
+    # вывести дату и количество процессов
+    echo "$date $procs"
+
+    # ждать 5 секунд
+    sleep 5
+done
+^X
+
+bash sleeper.sh
+
+2
+nano sleeper.sh
+#!/bin/bash
+
+# повторить 10 раз
+for i in {1..10}
+do
+    # получить текущую дату в формате ЧЧ:ММ:СС
+    date=$(date +"%T")
+
+    # получить количество процессов с помощью pgrep -c
+    # подробнее см. [1]
+    procs=$(pgrep -c .)
+
+    # вывести дату и количество процессов
+    echo "$date $procs"
+
+    # ждать 5 секунд
+    # sleep 5
+done
+^X
+
+bash sleeper.sh
+
+
+3
+nano cpuinfo.sh
+#!/bin/bash
+
+# создаем файл cpuinfo.txt в домашней директории
+file=~/cpuinfo.txt
+
+# записываем в файл всю информацию о процессоре, используя команду lscpu
+lscpu > $file
+
+# выводим содержимое файла на экран
+cat $file
+
+
+4
+#!/bin/bash
+# Скрипт для записи информации об операционной системе в файл
+
+# Задаем имя файла для сохранения информации
+filename="os_info.txt"
+
+# Получаем информацию об операционной системе
+os_info=$(uname -a)
+
+# Записываем информацию в файл
+echo "$os_info" > $filename
+
+# Выводим сообщение об успешном выполнении скрипта
+echo "Информация об операционной системе записана в файл $filename"
+
+
+5
+nano osname.sh
+#!bin/bash
+file=~/osname.txt
+cat /etc/os-release | grep "^NAME=" | cut -d'=' -f2 |tr -d '"' > $file
+cat $file
+
+6
+nano create_files.sh
+#!/bin/bash
+for i in {50..100}
+do
+   touch $i.txt
+done
+
+
+
+
+
