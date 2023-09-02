@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# 5 случайных команд
+ls
+pwd
+whoami
+date
+echo "Привет, мир!"
+
+# Добавить информацию в logs.txt
+{
+    cat ~/readme.txt
+    echo "test"
+    tail -n 2 /etc/group | head -n 1
+    history | tail -n 2 | head -n 1
+    df | awk '{print $1}'
+} >> /opt/test/logs/linux/logs.txt
