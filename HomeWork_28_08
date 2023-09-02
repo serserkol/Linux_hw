@@ -1,3 +1,6 @@
+mkdir -p /opt/test/logs/linux
+touch /opt/test/logs/linux/logs.txt
+
 #!/bin/bash
 
 # 5 случайных команд
@@ -15,3 +18,6 @@ echo "Привет, мир!"
     history | tail -n 2 | head -n 1
     df | awk '{print $1}'
 } >> /opt/test/logs/linux/logs.txt
+^x
+chmod +x MyScript.sh
+./MyScript.sh
